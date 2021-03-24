@@ -1,1 +1,1 @@
-# gitskills so easy
+gitskills is all and so easy
