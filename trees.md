@@ -292,10 +292,10 @@ $$-\frac{1}{2}\sum\limits_{j=1}^{T}\frac{G_j^2}{H_{j}+\lambda}+\gamma T$$
 我们可以把它看成分区好的树模型的loss，如果时间允许，我们当然可以对所有可能的树做搜索优化，一般情况下是用贪婪算法对树进行一步一步的分裂
 
 假设我们考虑将一个节点的数据分裂成左右两个节点：$L$ and $R$，那么这次分裂的loss是
-$$-\frac{1}{2}\left[\frac{G_L^2}{H_{L}+\lambda}+\frac{G_R^2}{H_{R}+\lambda}\right]$$
+$$-\frac{1}{2}\left[\frac{G_L^2}{H_{L}+\lambda}+\frac{G_R^2}{H_{R}+\lambda}\right]+2\gamma$$
 
 分裂前的loss，例如树模型只有一个叶节点
-$$-\frac{1}{2}\left[\frac{(G_{L}+G_{R})^2}{H_{L}+H_{R}+\lambda}\right]$$
+$$-\frac{1}{2}\left[\frac{(G_{L}+G_{R})^2}{H_{L}+H_{R}+\lambda}\right]+\gamma$$
 
 可以定义节点分裂前后的loss的差为Gain
 $$Gain=\frac{1}{2}\left[\frac{G_L^2}{H_{L}+\lambda}+\frac{G_R^2}{H_{R}+\lambda}-\frac{(G_{L}+G_{R})^2}{H_{L}+H_{R}+\lambda}\right]-\lambda$$
